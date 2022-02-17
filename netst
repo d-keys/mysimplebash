@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Simple bash script to list network functions using network manager cli ('nmcli').
+
+echo 'Internet Conectivity:'
+nmcli -a n
+echo ' '
+echo 'Showing general Network Manager Status.'
+nmcli -a g
+echo ' '
+echo 'Wifi:'
+nmcli -a r
+echo ' '
+echo 'Ethernet:'
+nmcli -a c
+echo ' '
+echo 'Hardware:'
+nmcli -a d
+echo ' '
+echo 'Done.'

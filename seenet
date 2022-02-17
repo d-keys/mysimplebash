@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# A simple script to show current network status and connections of the system using netstat command.
-
-sudo netstat -evpa

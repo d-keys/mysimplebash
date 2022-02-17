@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Simple script to activate Ethernet connectivity using network manager (nmcli).
+# XXXX is your device name.
+
+echo 'Ethernet:'
+nmcli -a c
+echo 'Activating Ethernet cable connection...'
+nmcli device connect XXXX
+echo 'Ethernet cable connection is activated.'
+echo 'Ethernet:'
+nmcli -a c
+echo 'Done.'

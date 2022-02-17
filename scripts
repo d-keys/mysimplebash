@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Simple script to show all scripts in .local/bin folder, as usually, created by the user.
+# The open ("o") option, uses Thunar file manager, which can be easily changed in the script manually.
+
+echo 'List Scripts in .local/bin folder or Open .local/bin Folder? (l for list, o to open)'
+read re
+	if [ $re = 'l' ]; then
+		echo 'Scripts in .local/bin folder:'
+		ls -a $HOME/.local/bin
+	elif [ $re = 'o' ]; then
+		echo 'Opening .local/bin folder:'
+		thunar $HOME/.local/bin
+	else
+		echo 'Theres no action for that.'
+	fi

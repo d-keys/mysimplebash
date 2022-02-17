@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Simple script to deactivate network connectivity using network manager (nmcli).
+
+echo 'Internet Conectivity:'
+nmcli -a n
+echo 'Deactivating all Networking capabilities...'
+nmcli networking off
+echo 'Internet Conectivity:'
+nmcli -a n
+echo 'Done.'

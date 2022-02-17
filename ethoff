@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Simple script to deactivate Ethernet connectivity using network manager (nmcli).
+# XXXX is your device name.
+
+echo 'Ethernet:'
+nmcli -a c
+echo 'Deactivating Ethernet cable connection...'
+nmcli device disconnect XXXX
+echo 'Ethernet cable connection is deactivated.'
+echo 'Ethernet:'
+nmcli -a c
+echo 'Done.'

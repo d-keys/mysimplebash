@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Simple script to activate the network connectivity using network manager (nmcli).
+
+echo 'Internet Conectivity:'
+nmcli -a n
+echo 'Activating all Networking capabilities...'
+nmcli networking on
+echo 'Internet Conectivity:'
+nmcli -a n
+echo 'Done.'

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Simple script to activate "Force Idle" and "Idle" modes in Android systems.
+
+echo 'Turn Idle and ForceIdle modes On? y/n'
+read re
+	if [ $re = 'y' ]; then
+		echo 'Activating Force Idle mode in Android.'
+		adb shell dumpsys deviceidle enable
+		adb shell dumpsys deviceidle force-idle
+		echo 'Force Idle mode and Idle mode, activated.'
+		echo 'Exiting...'
+	elif [ $re = 'n' ]; then
+		echo 'Force Idle mode not activated.'
+		echo 'Exiting...'
+	fi

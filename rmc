@@ -1,5 +1,5 @@
 #!/bin/bash
-# Simple script to clean the cache folder folder (~/.cache/) completely.
+# Simple script to clean the cache folder (~/.cache/) completely.
 
 echo 'Cleaning cache...'	
 rm -rv ~/.cache/*

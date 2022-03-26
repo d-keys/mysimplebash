@@ -9,7 +9,7 @@ nmcli networking on
 echo 'Internet Conectivity:'
 nmcli -a n
 echo "Waiting for network manager to recognize Ethernet network..."
-sleep 5
+sleep 3
 echo 'Ethernet:'
 nmcli -a c
 echo 'Activating Ethernet cable connection...'

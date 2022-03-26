@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Optmized script to activate the network using Network Manager CLI
+
+echo 'Internet Conectivity:'
+nmcli -a n
+echo 'Activating all Networking capabilities...'
+nmcli networking on
+echo 'Internet Conectivity:'
+nmcli -a n
+echo "Waiting for network manager to recognize Ethernet network..."
+sleep 5
+echo 'Ethernet:'
+nmcli -a c
+echo 'Activating Ethernet cable connection...'
+nmcli device connect XXXX
+echo 'Ethernet cable connection is activated.'
+echo 'Ethernet:'
+nmcli -a c
+echo 'Done.'

@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Simple script to make use of other simple scripts I've created to command CLI programs as a test of a more complex logic
+
+echo "Starting Script..."
+sleep 1
+# rmc Script also present in this repository. Remove cache from local cache folder.
+rmc
+
+echo "Clearing terminal screen"
+sleep 3
+clear
+
+sleep 1
+echo "Activating general network"
+sleep 1
+# nton Optmized simple script to activate networking using Network Manager CLI, also present in this repository.
+nton
+
+sleep 2
+echo "Showing overall network status..."
+sleep 1
+# netst Simple script to show local networking status using Network Manager CLI.
+netst
+
+sleep 2
+echo "Show network doors, pids and detailed status? (y/n)"
+	read re1
+		if [ $re1 = 'y' ]; then
+			echo "Please enter password:"
+			seenet
+			echo "Done."
+			sleep 2
+			echo "Open Overall System diagnosys tool? (y/n)"
+				read re2
+				if [ $re2 = 'y' ]; then
+					echo "Opening HTOP..."
+					sudo htop
+					echo "Done."
+					exit
+				elif [ $re2 = 'n' ]; then
+					echo "Done, then."
+					echo "Exiting..."
+					exit
+				fi
+			exit
+
+    elif [ $re1 = 'n' ]; then
+			echo "Open Overall System diagnosys tool? (y/n)"
+				read re3
+				if [ $re3 = 'y' ]; then
+					echo "Opening HTOP..."
+					sudo htop
+					echo "Done."
+					exit
+				elif [ $re3 = 'n' ]; then
+					echo "Done, then."
+					echo "Exiting..."
+					exit
+				fi
+		fi
+
+sleep 1
+echo "Open Overall System diagnosys tool? (y/n)"
+	read re4
+		if [ $re4 = 'y' ]; then
+			echo "Opening HTOP..."
+			sudo htop
+			echo "Done."
+			exit
+		elif [ $re4 = 'n' ]; then
+			echo "Done, then."
+			echo "Exiting..."
+			exit
+		fi
+exit

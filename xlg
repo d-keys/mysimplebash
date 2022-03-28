@@ -1,16 +1,19 @@
 #!/bin/bash
 
-# Simple script to make use of xrandr to optmize brightness and gamma changes through easy bash command process instead of typing the whole "xrandr --output HDMI-2 ..."
+# "xlg" stands for "xrandr light gamma"
 
+# Simple script to make use of xrandr to optmize brightness and gamma changes through easy bash command process instead of typing the whole "xrandr --output HDMI-2 ..."
 # xrandr uses two writting formats for Brightness and Gamma. 
 
 # Brightness uses a simple '1.0', '0.8', '0.5'.
-
-# Gamma, on the other hand, uses RGB values, each section separated from ":" being a color in the image. For example: "--gamma 0.8:0.7:0.9" would be 'set gamma to Red 0.8, Green 0.7 and Blue 0.9'.
+# Gamma, on the other hand, uses RGB values, each section separated from ":" being a color in the image.
+# For example: "--gamma 0.8:0.7:0.9" would be 'set gamma to Red 0.8, Green 0.7 and Blue 0.9'.
 
 
 echo "Please, write Brightness Value (Format 1.0):"
 read bv
 echo "Please, write Gamma Value (Format 1.0:1.0:1.0):"
 read gv
+
+# Instead of using "--output HDMI-X", you can use your own monitor or device. In this example script, I used HDMI-1.
 xrandr --output HDMI-1 --brightness $bv --gamma $gv
